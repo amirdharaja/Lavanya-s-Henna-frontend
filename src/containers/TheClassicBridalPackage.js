@@ -21,7 +21,7 @@ class TheClassicBridalPackage extends Component {
                 <MainNav />
                 <div id="classic-bridal-package">
                     <div class="dropdown">
-                        <button class="button" role="img">OTHER PACKEGES <span role="img">&#9196;</span></button>
+                        <button class="button">OTHER PACKEGES</button>
                         <div class="dropdown-content">
                             <a href="/packages/classic-bridal">Classic Bridal Package</a>
                             <a href="/packages/elegant-bridal">Elegant Bridal Package</a>
