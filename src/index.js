@@ -19,6 +19,8 @@ const store = createStore(Reducer, applyMiddleware(thunk));
 
 const app = (
   <Provider store={store}>
+    <div style={{ zIndex: 9999, position: 'relative', top: '60px' }}>
+    </div>
     <App />
   </Provider>
 )
