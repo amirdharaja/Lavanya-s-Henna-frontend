@@ -35,11 +35,9 @@ class MainNav extends React.PureComponent {
         return (
             <>
                 <div id='nav-top'>
-                    <a href="tel:+919600234795">
-                        <button><img src={phone} width='30px' alt='phone number' /> +91 - 9600234795</button>
-                    </a>
+                    <a href="tel:+919600234795"><img src={phone} width='30px' alt='phone number' /> +91 - 9600234795</a>
                     <a href="https://api.whatsapp.com/send?phone=+919600234795" rel="noopener noreferrer" target="_blank">
-                        <button><img src={whatsapp} width='30px' alt='whatsapp' /> WHATSAPP ME</button>
+                    <img src={whatsapp} width='30px' alt='whatsapp' /> Whatsapp Me
                     </a>
                 </div>
 
@@ -49,31 +47,36 @@ class MainNav extends React.PureComponent {
                             <a href="/"><img id='logo' src={logo} alt='logo' /></a>
                         </div>
                         <nav>
-                            <div className="nav-mobile"><span id="nav-toggle">MENU<span></span></span></div>
+                            <div className="nav-mobile"><span id="nav-toggle">MENU</span></div>
                             <ul className="nav-list">
                                 <li>
                                     <a href="/">
-                                        <button className="dropbtn">HOME <span id='count'>{this.props.cart_count}</span></button>
+                                        <button className="dropbtn">HOME</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/packages/classic-bridal">
+                                        <button className="dropbtn">PACKAGES</button>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/gallery">
-                                        <button className="dropbtn">GALLERY <span id='count'>{this.props.cart_count}</span></button>
+                                        <button className="dropbtn">GALLERY</button>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/services">
-                                        <button className="dropbtn">SERVICES <span id='count'>{this.props.cart_count}</span></button>
+                                        <button className="dropbtn">SERVICES</button>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/about/me">
-                                        <button className="dropbtn">ABOUT ME <span id='count'>{this.props.cart_count}</span></button>
+                                        <button className="dropbtn">ABOUT ME</button>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/about/mehndi">
-                                        <button className="dropbtn">ABOUT MEHNDI <span id='count'>{this.props.cart_count}</span></button>
+                                        <button className="dropbtn">ABOUT MEHNDI</button>
                                     </a>
                                 </li>
                             </ul>

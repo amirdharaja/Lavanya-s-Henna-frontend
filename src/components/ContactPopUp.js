@@ -2,7 +2,9 @@ import React from 'react';
 
 import axios from 'axios';
 
-import {BASE_URL} from '../store/actions/ActionTypes';
+import { BASE_URL } from '../store/actions/ActionTypes';
+
+import Alert from '../containers/Alert';
 
 class ContactPopUp extends React.Component {
 
@@ -18,7 +20,8 @@ class ContactPopUp extends React.Component {
             email: '',
             phone: '',
             details: ''
-        }
+        },
+        alertVisible: false
     }
     openForm() {
         document.getElementById("myForm").style.display = "block";
@@ -76,12 +79,12 @@ class ContactPopUp extends React.Component {
         if (is_valid) {
             axios.post(BASE_URL + '/contact/', { data: data })
                 .then(response => {
-                    if (response.status === 200) {
+                    if (response.status === 201) {
                         this.setState({
                             alertVisible: true,
+                            alertTitle: 'Success',
                             alertType: 'success',
-                            messageTitle: 'Success',
-                            message: 'Thank you for reaching us. We will get back with in 24 hours',
+                            alertMessage: 'Thank you for reaching me. We will get back to you with in 12 hours',
                             userContactRequest: {
                                 full_name: '',
                                 email: '',
@@ -93,7 +96,7 @@ class ContactPopUp extends React.Component {
                     }
                 })
                 .catch(error => {
-                    this.setState({ alertVisible: true, alertType: 'danger', messageTitle: 'Sorry', message: 'Unable to complete the process, Please retry' })
+                    this.setState({ alertVisible: true, alertTitle: 'Sorry', alertType: 'danger', alertMessage: 'Unable to complete the process, Please try again' })
                 })
         }
         else {
@@ -109,11 +112,20 @@ class ContactPopUp extends React.Component {
     render() {
         return (
             <main id='contact-popup'>
-                <a href='#0' className="open-button" onClick={this.openForm}>
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36px" height="36px"><path d="M0 0h24v24H0z" fill="none" /><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" /></svg> */}
-                Contact Me
-                </a>
-
+                {
+                    (this.state.alertVisible) ? (
+                        <div id='alert-message'>
+                            <Alert
+                            id="001"
+                            type={this.state.alertType}
+                            title={this.state.alertTitle}
+                            message={this.state.alertMessage}
+                            >
+                        </Alert>
+                        </div>
+                    ) : (<></>)
+                }
+                <a href='#0' className="open-button" onClick={this.openForm}>Contact Me</a>
                 <div className="chat-popup" id="myForm">
                     <div className="form-container">
                         <h4>QUICK CONTACT</h4>
@@ -124,14 +136,14 @@ class ContactPopUp extends React.Component {
                             onChange={this.inputChanged}
                             value={this.state.userContactRequest.full_name}
                             maxLength='128'
-                            placeholder="Full Name" required/>
+                            placeholder="Full Name" required />
                         <input
                             type="email"
                             name="email"
                             className={this.state.errors.email}
                             onChange={this.inputChanged}
                             value={this.state.userContactRequest.email}
-                            placeholder="Email ID" required/>
+                            placeholder="Email ID" required />
                         <input
                             type="number"
                             name="phone"
@@ -145,7 +157,7 @@ class ContactPopUp extends React.Component {
                             onChange={this.inputChanged}
                             value={this.state.userContactRequest.details}
                             maxLength='255'
-                            placeholder="Leave a message" required/>
+                            placeholder="Leave a message" required />
 
                         <button type="submit" className="btn" onClick={this.sendRequest}>Send</button>
                         <button type="button" className="btn cancel" onClick={this.closeForm}>Close</button>

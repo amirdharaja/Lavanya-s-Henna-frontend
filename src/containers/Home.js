@@ -18,18 +18,16 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="Home">
+            <main>
                 <MainNav />
-                <HomeCarousel
-                    main_slide_images={this.props.main_slide_images}
-                />
-                <div id='main-heading'>
-                <h2>Committed to making your special occasion a <strong>memorable one</strong></h2>
-                <h1>Welcome to Lavanya's Henna</h1>
+                <HomeCarousel main_slide_images={this.props.main_slide_images} />
+                <div id='home'>
+                    <h2>Committed to making your special occasion <strong>a memorable one</strong></h2>
+                    <h1><strong>W</strong>elcome to <strong>L</strong>avanya<strong>'</strong>s <strong>H</strong>enna</h1>
                 </div>
                 <Welcome />
                 <PageImage />
-            </div>
+            </main>
         );
     }
 }
@@ -40,8 +38,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      getHome: () => dispatch(userActions.getHome()),
+        getHome: () => dispatch(userActions.getHome()),
     }
-  }
-  
-  export default  connect(mapStateToProps, mapDispatchToProps)(Home);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

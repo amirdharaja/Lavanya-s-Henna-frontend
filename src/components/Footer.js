@@ -27,10 +27,10 @@ export const Footer = () => {
 
                     <div>
                         <img alt='address' src={address} />
-                        <p>105, 5th street, Poongothai Nagar, <br /> Sitra, Coimbatore<br />
-                            <a href="tel:+919600234795">+91 - 9600234795</a><br />
-                            <a href="mailto:lavanyashenna@gmail.com">lavanyashenna@gmail.com</a>
-                        </p>
+                        <h6>105, 5th street, Poongothai nagar,</h6>
+                        <h6>Sitra, Coimbatore</h6>
+                        <h6><a href="tel:+919600234795">+91 - 9600234795</a></h6>
+                        <h6><a href="mailto:lavanyashenna@gmail.com">lavanyashenna@gmail.com</a></h6>
                     </div>
 
                 </div>

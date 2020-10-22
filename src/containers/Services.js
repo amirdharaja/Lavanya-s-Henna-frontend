@@ -16,7 +16,7 @@ class Services extends Component {
                 <div className="services-page">
                     <h1>SERVICES</h1>
                     <h2>What I Do</h2>
-                    <h3>__</h3>
+                    <h3>_</h3>
                     <h4>Committed to making your special occasion a memorable one...</h4>
                     <div>
                         <div>
