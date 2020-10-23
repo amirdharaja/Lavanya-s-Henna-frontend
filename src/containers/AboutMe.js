@@ -1,9 +1,6 @@
 
 import React, { Component } from 'react';
 
-import { connect } from 'react-redux';
-import * as userActions from '../store/actions/actions';
-
 import MainNav from '../components/Nav';
 
 import lavanya from '../resources/images/lavanya.jpeg';
@@ -28,14 +25,5 @@ class AboutMe extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return state
-}
 
-const mapDispatchToProps = dispatch => {
-    return {
-        getHome: () => dispatch(userActions.getHome()),
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AboutMe);
+export default AboutMe;

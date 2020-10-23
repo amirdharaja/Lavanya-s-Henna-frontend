@@ -1,9 +1,6 @@
 
 import React, { Component } from 'react';
 
-import { connect } from 'react-redux';
-import * as userActions from '../store/actions/actions';
-
 import MainNav from '../components/Nav';
 
 
@@ -63,14 +60,4 @@ class Services extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return state
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        getHome: () => dispatch(userActions.getHome()),
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Services);
+export default Services;

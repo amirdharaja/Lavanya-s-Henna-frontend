@@ -21,15 +21,12 @@ class TheElegantBridalPackage extends Component {
             <main>
                 <MainNav />
                 <div id="classic-bridal-package">
-                    <div className="dropdown">
-                        <button>OTHER PACKEGES</button>
-                        <div className="dropdown-content">
-                            <a href="/packages/classic-bridal/?name=cb">Classic Bridal Package</a>
-                            <a href="/packages/elegant-bridal/?name=eb">Elegant Bridal Package</a>
-                            <a href="/packages/royal-bridal/?name=rb">Royal Bridal Package</a>
-                            <a href="/packages/star-bridal-1/?name=sb1">Star Bridal Package 1</a>
-                            <a href="/packages/star-bridal-2/?name=sb2">Star Bridal Package 2</a>
-                        </div>
+                    <div className="bridal-links">
+                        <a href="/packages/classic-bridal/?name=cb">Classic Bridal Package</a>
+                        <a href="/packages/elegant-bridal/?name=eb">Elegant Bridal Package</a>
+                        <a href="/packages/royal-bridal/?name=rb">Royal Bridal Package</a>
+                        <a href="/packages/star-bridal-1/?name=sb1">Star Bridal Package 1</a>
+                        <a href="/packages/star-bridal-2/?name=sb2">Star Bridal Package 2</a>
                     </div>
                     <div>
                         {this.props.isLoading

@@ -3,7 +3,7 @@
 
 :root{
   --primary-color: #330301;
-  --secondary-color: #ffde03;
+  --secondary-color: #E7A731;
   --third-color: #6A0200;
 
   --primary-font-color: #E7A731;
@@ -169,8 +169,8 @@ input::-webkit-outer-spin-button,
 
 
 /* ---------------------------------------------------Footer componet style Start ---------------------------- */
-#footer #logo{
-  width: 200px;
+#footer #footer-logo{
+  width: 150px;
 }
 #footer section {
   width: 100%;
@@ -493,37 +493,25 @@ input::-webkit-outer-spin-button,
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 150px;
-  background-color: var(--primary-color);
-  margin-top: -10px;
-  border: 1px solid var(--primary-font-color);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+#classic-bridal-package .bridal-links {
+  margin: 10px 0;
 }
-
-.dropdown-content a {
+#classic-bridal-package .bridal-links a{
   color: var(--primary-font-color);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 0.9rem;
+  border: 1px solid var(--primary-font-color);
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+  font-size: 0.8rem;
+  text-align: center;
   transition: 0.3s;
-  text-align: left;
 }
-
-.dropdown-content a:hover {
-  background-color: var(--secondary-color); 
+#classic-bridal-package .bridal-links a:hover{
+  background-color: var(--primary-font-color);
   color: var(--primary-color);
-  font-weight: bold;
 }
-
-.dropdown:hover .dropdown-content {display: block;}
-
 #classic-bridal-package div{
   text-align: justify;
 }
@@ -690,25 +678,40 @@ hr{
 
 
 /* --------------------------------------------------- Gallery Page style Start ---------------------------- */
-
+@media (max-width: 500px) {
+  .gallery>div button{
+    text-align: center;
+    margin: 3px;
+    width: 60px;
+    height: 30px;
+    font-size: 0.8rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--primary-font-color);
+    color: var(--primary-font-color);
+    transition: 0.3s;
+  }
+}
+@media (min-width: 501px) {
+  .gallery>div button{
+    text-align: center;
+    margin: 0 5px;
+    width: 70px;
+    height: 40px;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--primary-font-color);
+    color: var(--primary-font-color);
+    transition: 0.3s;
+  }
+}
 .gallery>div{
   text-align: center;
   margin: 20px;
 }
 .gallery #no-data{
   color: var(--primary-font-color);
-}
-.gallery>div button{
-  text-align: center;
-  margin: 0 5px;
-  width: 70px;
-  height: 40px;
-  font-size: 0.9rem;
-  outline: none;
-  background-color: transparent;
-  border: 1px solid var(--primary-font-color);
-  color: var(--primary-font-color);
-  transition: 0.3s;
 }
 .gallery>div button:hover{
   background-color: var(--primary-font-color);

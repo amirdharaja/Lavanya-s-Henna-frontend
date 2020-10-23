@@ -1,9 +1,9 @@
 $content-width: 1000px;
-$breakpoint: 799px;
+$breakpoint: 999px;
 $nav-height: 70px;
 
 $primary-color: #330301;
-$secondary-color: #ffde03;
+$secondary-color: #E7A731;
 $third-color: #6A0200;
 
 $primary-font-color: #E7A731;
@@ -44,7 +44,8 @@ $footer-background-color: $black;
   background-color: transparent;
 }
 .dropbtn:hover{
-  color: $secondary-color;
+  color: $white;
+  text-shadow: 0 0 20px $white;
 }
 
 .navigation {
@@ -60,13 +61,15 @@ $footer-background-color: $black;
 
 .brand {
   position: absolute;
-  padding-left: 20px;
   float: left;
-  line-height: $nav-height;
-  text-transform: uppercase;
-  font-size: 1.4em;
   a, a:visited {
     text-decoration: none;
+  }
+  #logo{
+    width: 68px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
   }
 }
 .nav-container {
@@ -114,7 +117,7 @@ nav {
   height: $nav-height;
   width: $nav-height;
 }
-@media only screen and (max-width: 798px) {
+@media only screen and (max-width: 999px) {
   .nav-mobile {
     display: block;
   }
@@ -146,7 +149,8 @@ nav {
   left: 7px;
   top: 22px;
   cursor: pointer;
-  color: white;
+  color: $primary-font-color;
+  text-shadow: 0 0 30px $white;
   span:before {
     top: -10px;
   }
