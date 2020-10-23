@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo_s2 from '../resources/logo/l2.png';
+import logo from '../resources/logo/logo1.png';
 import facebook from '../resources/icons/facebook.svg';
 import whatsapp from '../resources/icons/whatsapp.svg';
 import instagram from '../resources/icons/instagram.svg';
@@ -12,7 +12,7 @@ export const Footer = () => {
         <div id='footer'>
             <footer className="footer-distributed">
                 <div className="footer-left">
-                    <a href="/"><img id='logo' src={logo_s2} alt='logo' /></a>
+                    <a href="/"><img id='footer-logo' src={logo} alt='logo' /></a>
                     <p className="footer-links">
                         <a href="/" className="link-1">HOME &nbsp;</a>
                         <a href="/gallery">GALLERY &nbsp;</a>

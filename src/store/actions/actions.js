@@ -16,7 +16,6 @@ export const getHome = () => {
 }
 
 export const getGallery = (sort_by) => {
-    console.log(sort_by)
     return dispatch => {
         const url = ActionTypes.BASE_URL + `/gallery/?sort=${sort_by}`
         axios.get(url)

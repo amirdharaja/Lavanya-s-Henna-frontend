@@ -7,6 +7,7 @@ import Gallery from './containers/Gallery';
 import Home from './containers/Home';
 import Login from './containers/Login';
 import Services from './containers/Services';
+import Tips from './containers/Tips';
 
 import TheClassicBridalPackage from './containers/TheClassicBridalPackage';
 import TheElegantBridalPackage from './containers/TheElegantBridalPackage';
@@ -27,6 +28,7 @@ const BaseRouter = () => (
     <Route exact path="/gallery" component={Gallery} />
     <Route exact path="/admin/login" component={Login} />
     <Route exact path="/services" component={Services} />
+    <Route exact path="/mehndi/tips" component={Tips} />
 
     <Route exact path="/packages/classic-bridal" component={TheClassicBridalPackage} />
     <Route exact path="/packages/elegant-bridal" component={TheElegantBridalPackage} />
