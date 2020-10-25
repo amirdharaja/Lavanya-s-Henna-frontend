@@ -8,7 +8,7 @@ import { BASE_URL, AUTH_TOKEN } from '../../store/actions/ActionTypes';
 import { adminLogout } from '../../store/actions/actions';
 
 import Alert from '../Alert';
-import { Modal, ModalBody, ModalHeader, Form, FormText, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
+import { Modal, ModalBody, ModalHeader, Form, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
 import Item from '../admin/Item'
 import Request from '../admin/Request'
 import { Spinner } from 'reactstrap';

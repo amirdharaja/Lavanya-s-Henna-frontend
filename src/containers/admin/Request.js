@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { BASE_URL } from '../../store/actions/ActionTypes';
 
 
 const Item = ({ id, name, phone, email, details, index, itemCategory, sendResponse, removeFunc }) => (
