@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 
 import MainNav from '../components/Nav';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 import r9 from '../resources/images/r9.jpg';
 
@@ -30,8 +32,9 @@ class Tips extends Component {
                         <li><p>Never wash the mehndi on the same day as application.</p></li>
                         <li><p>Avoid getting mehndi done too late at night as you'll need enough time to leave it on your skin for a great result.</p></li>
                     </ul>
-
                 </div>
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }

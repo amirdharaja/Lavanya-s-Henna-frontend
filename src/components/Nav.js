@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import "../styles/scss/style.scss";
-import logo from '../resources/logo/logo1.png';
+import logo from '../resources/logo/logo.png';
 import whatsapp from '../resources/icons/whatsapp.svg';
 import phone from '../resources/icons/phone.svg';
 

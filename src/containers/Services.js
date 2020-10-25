@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 
 import MainNav from '../components/Nav';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 
 class Services extends Component {
@@ -53,8 +55,9 @@ class Services extends Component {
                             <p>A fun way to bond with your girlfriends. Go with a non-traditional mehndi design, maybe something on the back or shoulder.</p>
                         </div>
                     </div>
-
                 </div>
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }
