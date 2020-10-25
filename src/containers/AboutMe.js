@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 
 import MainNav from '../components/Nav';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 import lavanya from '../resources/images/lavanya.jpeg';
 
@@ -20,6 +22,8 @@ class AboutMe extends Component {
                     <p>My henna paste is made with 100% natural Henna powder, lemon juice, and essential oils. I do not use “Black henna” because I believe it is unethical and dangerous.</p>
                     <p>I can do Mehndi / Henna for just about any occasion. I Specialize in Bridal Mehndi, Sangeet Parties, Engagements, Baby Showers, Birthday Parties, Ladies Night outs, School Events, Corporate Events and Fundraisers. I love to extend this art form onto cakes and other mediums like wood, glass and candles.</p>
                 </div>
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }

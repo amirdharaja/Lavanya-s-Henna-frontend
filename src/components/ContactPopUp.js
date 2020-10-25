@@ -102,7 +102,8 @@ class ContactPopUp extends React.Component {
         else {
             this.setState({
                 isLoading: false,
-                message: 'Request Form is not valid, Please fill all the required fields',
+                alertTitle: 'Invalid inputs',
+                alertMessage: 'Request Form is not valid, Please fill all the required fields',
                 alertType: 'danger',
                 alertVisible: true,
             })
@@ -123,7 +124,7 @@ class ContactPopUp extends React.Component {
                             >
                         </Alert>
                         </div>
-                    ) : (<></>)
+                    ) : null
                 }
                 <a href='#0' className="open-button" onClick={this.openForm}>Contact Me</a>
                 <div className="chat-popup" id="myForm">

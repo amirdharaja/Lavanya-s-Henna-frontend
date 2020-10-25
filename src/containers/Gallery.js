@@ -6,6 +6,8 @@ import * as userActions from '../store/actions/actions';
 import { BASE_URL } from '../store/actions/ActionTypes';
 
 import MainNav from '../components/Nav';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 import { Spinner } from 'reactstrap';
 
@@ -54,6 +56,8 @@ class Gallery extends Component {
                         }
                     </div>
                 </div>
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }

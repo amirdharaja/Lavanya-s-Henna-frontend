@@ -8,6 +8,8 @@ import { BASE_URL } from '../store/actions/ActionTypes';
 import { Spinner } from 'reactstrap';
 
 import MainNav from '../components/Nav';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 class TheClassicBridalPackage extends Component {
 
@@ -50,6 +52,8 @@ class TheClassicBridalPackage extends Component {
                     </div>
                     <br />
                 </div>
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }

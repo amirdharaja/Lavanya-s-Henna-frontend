@@ -21,7 +21,7 @@
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  border: 1px var(--secondary-color) dotted;
+  border: 2px var(--third-color) solid;
   background: linear-gradient(to bottom, var(--primary-color) 0%, var(--black) 50%);
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,7 +36,10 @@ input::-webkit-outer-spin-button,
 * a:hover, a:hover{
   text-decoration: none;
 }
-
+.formError{
+  border-color: red !important;
+  border-width: 2px !important;
+}
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -329,13 +332,14 @@ input::-webkit-outer-spin-button,
   display: none;
   position: fixed;
   bottom: 0;
-  right: 15px;
-  /* border: 1px solid var(--primary-font-color); */
+  right: 3px;
+  bottom: 1px;
   z-index: 9999;
 }
 #contact-popup .form-container {
   max-width: 300px;
-  border-radius: 10px;
+  border: 1px solid var(--primary-font-color);
+  border-radius: 10px 10px 0 0;
   padding: 20px;
   background: linear-gradient(to bottom, var(--primary-color) 30%, var(--black) 80%);
   box-shadow: 0 0 20px 5px var(--black);
@@ -524,9 +528,7 @@ input::-webkit-outer-spin-button,
 }
 #classic-bridal-package div:nth-child(2) div:nth-child(1) img:nth-child(1){
   width: 150px;
-  height: 150px;
   margin: 20px;
-  object-fit: cover;
   border: 1px solid var(--primary-font-color);
 }
 
@@ -719,9 +721,10 @@ hr{
 }
 .gallery #gallery-image{
   width: 200px;
-  height: 200px;
-  margin: 5px;
+  margin: 5px 10px;
   transition: 0.3s;
+  object-fit: contain;
+  border: 1px solid var(--primary-font-color);
 }
 .gallery #gallery-image:hover{
   box-shadow: 0 0 10px var(--primary-font-color);
@@ -729,3 +732,349 @@ hr{
 }
 
 /* --------------------------------------------------- Gallery Page style End ---------------------------- */
+
+/* --------------------------------------------------- Admin Login Page style Start ---------------------------- */
+.login {
+  margin: auto;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login .login-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  background: transparent;
+  border: 1px var(--primary-font-color) solid;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+.login .login-container img {
+  width: 120px;
+}
+
+.login p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.login button{
+  width: 100%;
+  color: var(--primary-color);
+  border-color: var(--primary-font-color);
+  font-weight: bold;
+  background-color: var(--primary-font-color);
+  outline: none;
+  height: 40px;
+  letter-spacing: 1px;
+
+}
+.login button:hover {
+  color: var(--primary-font-color);
+  background: var(--primary-color);
+}
+
+.login .col-left,
+.login .col-right {
+  width: 55%;
+  padding: 45px 35px;
+  display: flex;
+}
+
+.login .col-left {
+  width: 45%;
+  background: rgb(27, 24, 6);
+  -webkit-clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
+  clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
+}
+
+@media(max-width: 575.98px) {
+  .login .login-container {
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .login .col-left,
+  .login .col-right {
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}
+
+.login .login-text {
+  width: 100%;
+  color: var(--primary-font-color);
+  text-align: center;
+}
+
+.login .login-form {
+  width: 100%;
+  text-align: center;
+  color:var(--primary-font-color);
+}
+
+
+.login .login-form p a {
+  width: 100%;
+  text-align: center;
+  color: var(--third-color);
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.login .login-form p a:hover{
+  color: var(--white);
+  text-shadow: 0 0 10px var(--white);
+}
+
+.login .login-form p:last-child a:last-child {
+  float: right;
+}
+
+.login .login-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+  letter-spacing: .5px;
+}
+
+.login .login-form p:last-child label {
+  width: 60%;
+  float: left;
+}
+.login .login-form input {
+  color: var(--primary-font-color);
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: 1px solid var(--primary-font-color);
+}
+
+.login .login-form input:focus {
+  border-color: var(--white);
+}
+/* --------------------------------------------------- Admin Login Page style End ---------------------------- */
+
+
+/* --------------------------------------------------- Dashboard Page style Start ---------------------------- */
+.dashboard > div div:nth-child(1) {
+  height: 100%;
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.dashboard>div div:nth-child(1) img{
+  width: 100px;
+  margin-left: 10px;
+}
+.dashboard>div div:nth-child(1)>h6{
+  color: var(--primary-font-color);
+  text-align: center;
+  text-decoration: underline;
+}
+.dashboard>div div:nth-child(1) button {
+  width: 80%;
+  height: 30px;
+  position: relative;
+  top: 50px;
+  left: 5%;
+  margin: 5px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-font-color);
+  outline: none;
+  color: var(--primary-font-color);
+  transition: 0.3s;
+}
+.dashboard>div div:nth-child(1) button:hover{
+  background-color: var(--primary-font-color);
+  color: var(--primary-color);
+}
+.dashboard>div div:nth-child(1) button:nth-child(1){
+  background-color: var(--primary-font-color);
+  margin-bottom: 40px;
+  margin-top: -100px;
+  border: 1px solid var(--primary-font-color);
+  color: var(--primary-color);
+}
+.dashboard>div div:nth-child(1) button:nth-child(1):hover{
+  background-color: transparent;
+  color: var(--primary-font-color);
+}
+.dashboard>div div:nth-child(2){
+  border: 2px solid rgb(58, 58, 58);
+  margin-left: 95px;
+  padding: 50px;
+}
+.dashboard .main{
+  min-height: 100vh;
+}
+.dashboard>div div:nth-child(2)>span{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dashboard>div div:nth-child(2)>span button:nth-child(1),
+.dashboard>div div:nth-child(2)>span button:nth-child(2),
+.dashboard>div div:nth-child(2)>span button:nth-child(3){
+  background-color: transparent;
+  margin-top: -20px;
+  color: var(--white);
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 200px;
+  font-size: 0.9rem;
+  border: 1px solid var(--white);
+  transition: 0.3s;
+}
+.dashboard>div div:nth-child(2)>span button:nth-child(1):hover,
+.dashboard>div div:nth-child(2)>span button:nth-child(2):hover,
+.dashboard>div div:nth-child(2)>span button:nth-child(3):hover{
+  background-color: rgb(0, 165, 0);
+  border-color: rgb(0, 165, 0);
+}
+@media screen and (max-height: 450px) {
+  .dashboard>div div:nth-child(1) {padding-top: 15px;}
+  .dashboard>div div:nth-child(1) a {font-size: 18px;}
+}
+
+/* ------------ Request Section Start -------------------- */
+.dashboard #requests {
+  font-size: 0.9rem;
+}
+.dashboard #requests td{
+  padding: 0 10px;
+}
+.dashboard #requests th{
+  text-align: center;
+  background-color: rgb(0, 43, 59);
+  color: var(--white);
+}
+.dashboard #requests td{
+  text-align: center;
+}
+.dashboard #requests td:nth-child(2), .dashboard #requests td:nth-child(4){
+  text-align: left;
+}
+.dashboard #requests td:nth-child(5){
+  text-align: justify;
+}
+.dashboard #requests th:nth-child(3){
+  width: 70px;
+}
+.dashboard #requests th:nth-child(6){
+  width: 120px;
+}
+.dashboard #requests button{
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.dashboard #requests button:nth-child(1){
+  background-color: green;
+}
+.dashboard #requests button:nth-child(1):hover{
+  background-color: rgb(1, 59, 1);
+}
+.dashboard #requests button:nth-child(2){
+  background-color: rgb(223, 66, 66);
+}
+.dashboard #requests button:nth-child(2):hover{
+  background-color: rgb(109, 0, 0);
+}
+/* ------------ Request Section End -------------------- */
+
+
+/* ------------ Image Section Start -------------------- */
+#item-images{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#item-container img{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 150px;
+  padding-top: 20px;
+}
+#item-container button{
+  background-color: rgb(223, 66, 66);
+  width: 100%;
+  margin: 0px 10px 0 0px;
+  outline: none;
+  border: none;
+}
+#item-container button:hover{
+  background-color:rgb(109, 0, 0);
+}
+/* ------------ Image Section End -------------------- */
+
+#admin-images>h4, #requests>h4{
+  color: var(--primary-font-color);
+  font-size: 1rem;
+}
+
+#modal{
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+}
+#response-form #form-label, #response-form #form-input{
+  background-color: transparent;
+  border-color: var(--primary-font-color);
+  border-radius: 0;
+  cursor: not-allowed;
+}
+#response-form #form-label{
+  width: 80px;
+  color: var(--primary-font-color);
+}
+#response-form #form-input{
+  color: var(--secondary-font-color);
+}
+#response-form #response{
+  color: var(--black);
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+  border-color: var(--primary-font-color);
+  border-radius: 0;
+}
+
+/* --------------------------------------------------- Dashboard Page style End ---------------------------- */
+
+#logout{
+  background-color: transparent;
+  margin-top: 40px;
+  border-color: red;
+  color: red;
+}
+#logout:hover{
+  background-color: red;
+  color: var(--white);
+}

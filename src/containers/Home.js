@@ -8,6 +8,8 @@ import MainNav from '../components/Nav';
 import HomeCarousel from '../components/HomeCarousel';
 import Welcome from '../components/Welcome';
 import PageImage from '../components/PageImage';
+import Footer from '../components/Footer';
+import ContactPopUp from '../components/ContactPopUp';
 
 
 class Home extends Component {
@@ -27,6 +29,8 @@ class Home extends Component {
                 </div>
                 <Welcome />
                 <PageImage />
+                <Footer />
+                <ContactPopUp />
             </main>
         );
     }
