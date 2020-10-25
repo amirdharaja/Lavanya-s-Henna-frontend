@@ -1018,7 +1018,7 @@ hr{
 }
 #item-container img{
   display: flex;
-  justify-content: start;
+  justify-content: left;
   flex-wrap: wrap;
   width: 150px;
   padding-top: 20px;
@@ -1077,10 +1077,4 @@ hr{
 #logout:hover{
   background-color: red;
   color: var(--white);
-}
-#page404{
-  width: 30%;
-  margin-left: 35%;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
