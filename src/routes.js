@@ -7,6 +7,7 @@ import Gallery from './containers/Gallery';
 import Home from './containers/Home';
 import Services from './containers/Services';
 import Tips from './containers/Tips';
+import Page404 from './containers/Page404';
 
 import TheClassicBridalPackage from './containers/TheClassicBridalPackage';
 import TheElegantBridalPackage from './containers/TheElegantBridalPackage';
@@ -36,6 +37,8 @@ const BaseRouter = () => (
 
     <Route exact path="/lavanyashenna/admin/login" component={Login} />
     <Route exact path="/lavanyashenna/admin/dashboard" component={Dashboard} />
+  
+    <Route component={Page404} />
   </>
 );
 

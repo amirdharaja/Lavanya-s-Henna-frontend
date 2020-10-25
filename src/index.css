@@ -1078,3 +1078,9 @@ hr{
   background-color: red;
   color: var(--white);
 }
+#page404{
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
