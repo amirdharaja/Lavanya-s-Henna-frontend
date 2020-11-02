@@ -153,8 +153,8 @@ input::-webkit-outer-spin-button,
   border-radius: 100px 0;
   margin: 20px 0 0 5%;
   width: 90%;
-  height: 66vh;
-  object-fit: cover;
+  height: 100%;
+  object-fit: fill;
 }
 .carousel-indicators li{
   opacity: 1;
@@ -166,6 +166,11 @@ input::-webkit-outer-spin-button,
 @media (max-width: 880px) {
   #home-carousel img{
     margin-top: 0px;
+  }
+}
+@media (max-width: 600px) {
+  #home-carousel img{
+    border-radius: 20px 0;
   }
 }
 /* ---------------------------------------------------HomeCarousel style End ---------------------------- */
